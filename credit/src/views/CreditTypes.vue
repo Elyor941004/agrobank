@@ -3,7 +3,7 @@
 
   </div>
     <div class="body_credit_types">
-      <router-link to="/" class="credit_type_button">
+      <router-link to="/credit-procedure" class="credit_type_button">
         Кредитлаш тартиби
       </router-link>
       <button @click="modalForm" class="credit_type_button">
@@ -16,19 +16,24 @@
     <div class="user_form" v-if="modalShow">
       <form action="" class="form-group" >
         <label>Вход/регистрация</label><br>
-        <input type="text" placeholder="Паспорт"  class="form-control"><br>
-        <input type="text" placeholder="Ид карта" class="form-control"><br>
+        <select class="user_form_select" name="" id="">
+          <option class="form-control" value="" @click="UserPassword">Паспорт</option>
+          <option class="form-control" value="" @click="UserCardId">Ид карта</option>
+        </select>
+        <input type="text" placeholder="Паспорт" v-if="user_password" class="form-control">
+        <input type="text" placeholder="Ид карта" v-if="user_cardid" class="form-control">
         <button type="submit" @click="formSubmit">Тасдиқлаш</button>
       </form>
       <button class="form_close" @click="modalHide">x</button>
     </div>
-
 </template>
 <script>
 export default {
   data(){
     return{
-      modalShow:false
+      modalShow:false,
+      user_password:false,
+      user_cardid:false
     }
   },
   methods:{
@@ -40,6 +45,14 @@ export default {
     },
     formSubmit(){
       this.modalShow=false;
+    },
+    UserPassword(){
+      this.user_password=true;
+      this.user_cardid=false;
+    },
+    UserCardId(){
+      this.user_cardid=true;
+      this.user_password=false;
     }
   }
 }
@@ -69,13 +82,27 @@ export default {
     -webkit-transform: scale(1.04); /* Safari 3-8 */
     transform: scale(1.04);
   }
+  .user_form>button{
+
+  }
+  .user_form>button:hover{
+
+  }
+  .user_form_select{
+    width: 100%;
+    border: solid 1px #CED4DA;
+    padding: 9px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    background-color: white;
+  }
   .user_form{
     margin-top: 24px;
     display: flex;
     justify-content: center;
     z-index: 2;
   }
-  .user_form .form-group{
+  .user_form>.form-group{
     background-color: white;
     width: 24%;
     border: solid 1px #CED4DA;
@@ -83,17 +110,21 @@ export default {
     border-radius: 4px;
     box-shadow: 4px 4px #B4B4B4;
   }
-  .user_form .form-group>button{
+  .user_form>.form-group>button{
     width: 100%;
     background-color: #00CD69;
     border: 0px;
     border-radius: 4px;
+    transition: transform .2s;
+    margin-top: 14px;
   }
-  .user_form .form-group button:hover{
-    background-color: #2ACD24;
+  .user_form>.form-group>button:hover{
     box-shadow: 2px 2px #8F9CB4;
+    -ms-transform: scale(1.04); /* IE 9 */
+    -webkit-transform: scale(1.04); /* Safari 3-8 */
+    transform: scale(1.04);
   }
-  .user_form .form_close{
+  .user_form>.form_close{
     height: 34px;
     margin-left: 14px;
     background-color: transparent;

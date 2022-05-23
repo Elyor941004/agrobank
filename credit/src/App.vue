@@ -1,7 +1,7 @@
 <template>
   <nav>
     <router-link to="/">Credit</router-link> |
-    <a href="https://my.agrobank.uz/">Agrobank</a> 
+    <a href="https://my.agrobank.uz/">Agrobank</a>
 <!--    <router-link to="/home">Home</router-link> |-->
 <!--    <router-link to="/about">About</router-link>-->
   </nav>

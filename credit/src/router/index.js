@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CreditView from '../views/CreditView'
 import CreditTypes from '../views/CreditTypes'
+import CreditProcedure from '../views/CreditProcedure'
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: '/credit-type',
     name: 'credit-type',
     component: CreditTypes
+  },
+  {
+    path: '/credit-procedure',
+    name: 'credit-procedure',
+    component: CreditProcedure
   },
   {
     path: '/about',
