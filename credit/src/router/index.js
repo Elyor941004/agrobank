@@ -3,10 +3,17 @@ import HomeView from '../views/HomeView.vue'
 import CreditView from '../views/CreditView'
 import CreditTypes from '../views/CreditTypes'
 import CreditProcedure from '../views/CreditProcedure'
+import AboutUser from "@/views/AboutUser"
+import Agrobank from "@/views/Agrobank";
 
 const routes = [
   {
     path: '/',
+    name: 'agrobank',
+    component: Agrobank
+  },
+  {
+    path: '/credit',
     name: 'credit',
     component: CreditView
   },
@@ -24,6 +31,11 @@ const routes = [
     path: '/credit-procedure',
     name: 'credit-procedure',
     component: CreditProcedure
+  },
+  {
+    path: '/about-user',
+    name: 'about-user',
+    component: AboutUser
   },
   {
     path: '/about',

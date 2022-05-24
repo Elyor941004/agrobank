@@ -1,0 +1,27 @@
+.header_history{
+    display: flex;
+    justify-content: center;
+}
+.header_history_link{
+    width: 1200px;
+    margin: 6px 0px 14px 0px;
+}
+.header_history_url{
+    text-decoration: none;
+    color: #636C84;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none !important;
+}
+.header_history_url_main{
+    color: #0275E1;
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+.header_history_url_main:hover{
+    color: #211AE1;
+}
+.container{
+    width: 1200px;
+}

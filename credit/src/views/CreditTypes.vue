@@ -1,4 +1,8 @@
 <template>
+  <div class="header_history_link" style="display: flex; justify-content: flex-start !important;">
+    <router-link to="/" class="header_history_url_main">Оплата услуг</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
+    <span to="/" class="header_history_url">Международные переводы</span>
+  </div>
   <div class="body_user_form" v-if="modalShow">
 
   </div>
@@ -22,7 +26,7 @@
         </select>
         <input type="text" placeholder="Паспорт" v-if="user_password" class="form-control">
         <input type="text" placeholder="Ид карта" v-if="user_cardid" class="form-control">
-        <button type="submit" @click="formSubmit">Тасдиқлаш</button>
+        <router-link type="submit" to="/about-user" @click="formSubmit">Тасдиқлаш</router-link>
       </form>
       <button class="form_close" @click="modalHide">x</button>
     </div>
@@ -59,6 +63,7 @@ export default {
 </script>
 <style scoped>
 @import '../assets/css/bootstrap.min.css';
+@import '../assets/css/all.css';
   .body_credit_types{
     margin-top: 144px;
     display: flex;

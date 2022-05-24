@@ -1,5 +1,9 @@
 <template>
-  <div class="row">
+  <div class="row header_history">
+    <div class="header_history_link" style="display: flex; justify-content: flex-start !important;">
+      <router-link to="/" class="header_history_url_main">Оплата услуг</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
+      <span to="/" class="header_history_url">Международные переводы</span>
+    </div>
     <div class="col body_credit">
       <router-link to="/credit-type" class="body_credit_link">
         <img src="../assets/img/credit_card.jpg" alt="">
@@ -28,12 +32,14 @@
 
 </script>
 <style scoped>
+  @import '../assets/css/all.css';
   .body_credit{
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .body_credit_link{
+    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
