@@ -8,12 +8,12 @@ import Agrobank from "@/views/Agrobank";
 
 const routes = [
   {
-    path: '/',
+    path: '/agrobank',
     name: 'agrobank',
     component: Agrobank
   },
   {
-    path: '/credit',
+    path: '/',
     name: 'credit',
     component: CreditView
   },
