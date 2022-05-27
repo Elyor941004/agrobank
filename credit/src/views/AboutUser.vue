@@ -1,9 +1,9 @@
 <template>
-  <div class="header_history_link" style="display: flex; justify-content: flex-start !important;">
-    <router-link to="/" class="header_history_url_main">Оплата услуг</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
-    <span to="/" class="header_history_url">Международные переводы</span>
-  </div>
   <div class="container">
+    <div class="header_history_link" style="display: flex; justify-content: flex-start !important;">
+      <router-link to="/" class="header_history_url_main">Оплата услуг</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
+      <span to="/" class="header_history_url">Международные переводы</span>
+    </div>
     <h2>ползователской информатции</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt est libero reprehenderit!</p>
     <table class="table">

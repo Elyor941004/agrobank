@@ -1,5 +1,21 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    Get
   </div>
 </template>
+<script>
+export default {
+  name:'Get',
+  mounted() {
+    this.getData();
+  },
+  methods:{
+    getData(){
+      axios.get('/api/get')
+      .then( res => {
+        console.log(res);
+      })
+    }
+  }
+}
+</script>

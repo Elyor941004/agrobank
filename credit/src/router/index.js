@@ -5,6 +5,7 @@ import CreditTypes from '../views/CreditTypes'
 import CreditProcedure from '../views/CreditProcedure'
 import AboutUser from "@/views/AboutUser"
 import Agrobank from "@/views/Agrobank";
+import store from "@/store"
 
 const routes = [
   {
@@ -15,12 +16,20 @@ const routes = [
   {
     path: '/',
     name: 'credit',
-    component: CreditView
+    component: CreditView,
   },
   {
     path: '/home',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    beforeEnter: (to, from, next)=>{
+      if(!store.getters['auth/authenticated']){
+        return next({
+          name: 'agrobank'
+        })
+      }
+      next()
+    }
   },
   {
     path: '/credit-type',

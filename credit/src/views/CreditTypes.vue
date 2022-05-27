@@ -1,11 +1,12 @@
 <template>
-  <div class="header_history_link" style="display: flex; justify-content: flex-start !important;">
-    <router-link to="/" class="header_history_url_main">Оплата услуг</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
-    <span to="/" class="header_history_url">Международные переводы</span>
-  </div>
-  <div class="body_user_form" v-if="modalShow">
+  <div class="container">
+    <div class="header_history_link" style="display: flex; justify-content: flex-start !important;">
+      <router-link to="/" class="header_history_url_main">Оплата услуг</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
+      <span to="/" class="header_history_url">Международные переводы</span>
+    </div>
+    <div class="body_user_form" v-if="modalShow">
 
-  </div>
+    </div>
     <div class="body_credit_types">
       <router-link to="/credit-procedure" class="credit_type_button">
         Кредитлаш тартиби
@@ -30,6 +31,8 @@
       </form>
       <button class="form_close" @click="modalHide">x</button>
     </div>
+
+  </div>
 </template>
 <script>
 export default {

@@ -1,29 +1,28 @@
 <template>
-  <div class="header_history_link" style="display: flex; justify-content: flex-start !important;">
-    <router-link to="/" class="header_history_url_main">Оплата услуг</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
-    <span to="/" class="header_history_url">Международные переводы</span>
-  </div>
-  <div class="about">
+  <div class="container">
+    <div class="header_history_link" style="display: flex; justify-content: flex-start !important;">
+      <router-link to="/" class="header_history_url_main">Оплата услуг</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
+      <span to="/" class="header_history_url">Международные переводы</span>
+    </div>
+    <div class="about">
     <span>тугмаси босилганда, танланган кредит тури бўйича
       кредит бериш шартлари, тақдим этилиши лозим бўлган ҳужжатлар рўйхати,
       кредитнинг максимал миқдори, фоиз ставкаси, муддати ҳамда тақдим этилиши
       лозим бўлган таъминот турлари ҳақида маълумот акс эттирилади.
       (кредитларнинг турлари ва кредитлаш маълумотлари илова қилинади)</span>
-  </div>
-  <div class="container">
+    </div>
     <h2>ползователской информатции</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt est libero reprehenderit!</p>
     <table class="table">
       <thead>
       <tr>
-        <th>кредит тури бўйича
-          кредит бериш шартлари</th>
-        <th>тақдим этилиши лозим бўлган ҳужжатлар рўйхати</th>
-        <th>кредитнинг максимал миқдори</th>
-        <th>фоиз ставкаси</th>
-        <th>муддати</th>
-        <th>тақдим этилиши
-          лозим бўлган таъминот турлари</th>
+        <th>Кредит маҳсулоти номи</th>
+        <th>Кредит миқдори</th>
+        <th>Кредит муддати</th>
+        <th>Фоиз ставкаси</th>
+        <th>Қарз олувчи ҳисобидан дастлабки
+          бадал % да</th>
+        <th>дастлабки бадал суммаси</th>
       </tr>
       </thead>
       <tbody>
