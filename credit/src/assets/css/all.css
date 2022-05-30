@@ -272,7 +272,7 @@
     flex-direction: column;
     border: solid 1px #DCDCDC;
     transition: transform .3s;
-
+    text-decoration: none !important;
 }
 .body_content_column:hover{
     color: black;

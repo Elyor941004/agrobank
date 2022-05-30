@@ -9,14 +9,14 @@ import store from "@/store"
 
 const routes = [
   {
-    path: '/agrobank',
-    name: 'agrobank',
-    component: Agrobank
-  },
-  {
     path: '/',
     name: 'credit',
     component: CreditView,
+  },
+  {
+    path: '/agrobank',
+    name: 'agrobank',
+    component: Agrobank
   },
   {
     path: '/home',

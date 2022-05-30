@@ -70,9 +70,9 @@
         <div class="body_content_column">
           <img src="../assets/icon/TransportNew.svg"> <b>Транспорт</b>
         </div>
-        <div class="body_content_column">
+        <router-link to="/" class="body_content_column">
           <img src="../assets/icon/hand.svg"> <b>Электрон кредит олиш</b>
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
