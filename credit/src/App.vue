@@ -12,8 +12,8 @@
       <hr class="header_hr">
       <div class="header_mobile_container">
         <a href="https://my.agrobank.uz/pay" class="header_url">Переводы с карты на карту</a>
-        <a href="/agrobank" class="header_url">Центр поддержки и справки</a>
-        <a @click="transferModal" class="header_url">Банки доступные для переводов</a>
+        <router-link to="/agrobank"  class="header_url">Центр поддержки и справки</router-link>
+        <a @click="transferModal" href="#" class="header_url">Банки доступные для переводов</a>
       </div>
     </div>
     <div class="header_mobile_navigator">
@@ -47,7 +47,7 @@
           <img src="./assets/icon/service.svg" alt=""><br>
           <span>Центр поддержки и справки</span>
         </router-link>
-        <a @click="transferModal" class="header_body_credit_link">
+        <a @click="transferModal" href="#" class="header_body_credit_link">
           <img src="./assets/icon/bank.svg" alt=""><br>
           <span>Банки доступные для переводов</span>
         </a>
