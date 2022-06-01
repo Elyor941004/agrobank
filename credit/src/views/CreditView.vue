@@ -1,39 +1,50 @@
 <template>
-  <div class="container">
+  <credit-header/>
+    <div class="container">
     <div class="row header_history">
       <div class="header_history_link" style="display: flex; justify-content: flex-start !important;">
         <router-link to="/" class="header_history_url_main">Оплата услуг</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
         <span to="/" class="header_history_url">Международные переводы</span>
       </div>
-      <div class="col">
-        <div class="body_credit">
-          <router-link to="/credit-type" class="body_credit_link">
-            <img src="../assets/img/credit_card.jpg" alt="">
-            <b>Кредит карта</b>
+      <div class="body_content">
+        <div class="body_content_service">
+          <router-link to="/credit-type" class="body_content_column">
+            <div  class="body_credit_link">
+              <img src="../assets/img/credit_card.jpg" alt="">
+              <span>Кредит карта</span>
+            </div>
           </router-link>
-          <router-link to="/credit-type" class="body_credit_link">
-            <img src="../assets/img/avtokredit.jpg" alt="">
-            <b>Автокредит</b>
+          <router-link to="/credit-type" class="body_content_column">
+            <div class="body_credit_link">
+              <img src="../assets/img/mikroqarz.jpg" alt="">
+              <span>Микроқарз</span>
+            </div>
           </router-link>
         </div>
-      </div>
-      <div class="col">
-        <div class="body_credit">
-          <router-link to="/credit-type" class="body_credit_link">
-            <img src="../assets/img/mikroqarz.jpg" alt="">
-            <b>Микроқарз</b>
+        <div class="body_content_service">
+          <router-link to="/credit-type" class="body_content_column">
+            <div class="body_credit_link">
+              <img src="../assets/img/avtokredit.jpg" alt="">
+              <span>Автокредит</span>
+            </div>
           </router-link>
-          <router-link to="/credit-type" class="body_credit_link">
-            <img src="../assets/img/talimkredit.jpg" alt="">
-            <b>Та'лим кредиты</b>
+          <router-link to="/credit-type" class="body_content_column">
+            <div class="body_credit_link">
+              <img src="../assets/img/talimkredit.jpg" alt="">
+              <span>Та'лим кредиты</span>
+            </div>
           </router-link>
         </div>
       </div>
     </div>
   </div>
+  <credit-footer/>
 </template>
 <script>
-
+import Credit_footer from "@/components/CreditFooter";
+export default {
+  components: {Credit_footer}
+}
 </script>
 <style scoped>
   @import '../assets/css/all.css';

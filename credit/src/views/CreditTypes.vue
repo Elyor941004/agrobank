@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+  <credit-header/>
+    <div class="container">
     <div class="header_history_link" style="display: flex; justify-content: flex-start !important;">
       <router-link to="/" class="header_history_url_main">Оплата услуг</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
       <span to="/" class="header_history_url">Международные переводы</span>
@@ -8,15 +9,23 @@
 
     </div>
     <div class="body_credit_types">
-      <router-link to="/credit-procedure" class="credit_type_button">
-        Кредитлаш тартиби
-      </router-link>
-      <button @click="modalForm" class="credit_type_button">
-        Кредит олиш
-      </button>
-      <router-link to="/" class="credit_type_button">
-        Кредит калькулятори
-      </router-link>
+      <div class="body_content_service">
+        <router-link to="/credit-procedure" class="body_content_column">
+          <div class="body_content_column_credit">
+            <img src="../assets/img/credit_order.png"> <span>Кредитлаш тартиби</span>
+          </div>
+        </router-link>
+        <a @click="modalForm" class="body_content_column">
+          <div class="body_content_column_credit">
+            <img src="../assets/img/get_credit.png"> <span>Кредит олиш</span>
+          </div>
+        </a>
+        <router-link to="/credit-calculator" class="body_content_column">
+          <div class="body_content_column_credit">
+            <img src="../assets/img/credit_calculator.png"> <span>Кредит калькулятори</span>
+          </div>
+        </router-link>
+      </div>
     </div>
     <div class="user_form" v-if="modalShow">
       <form action="" class="form-group" >
@@ -29,37 +38,40 @@
         <input type="text" placeholder="Ид карта" v-if="user_cardid" class="form-control">
         <router-link type="submit" to="/about-user" @click="formSubmit">Тасдиқлаш</router-link>
       </form>
-      <button class="form_close" @click="modalHide">x</button>
+      <button class="form_close" @click="modalHide"><b>x</b></button>
     </div>
 
   </div>
+  <credit-footer/>
 </template>
 <script>
+import {mapState, mapMutations} from "vuex";
+
 export default {
   data(){
     return{
-      modalShow:false,
-      user_password:false,
-      user_cardid:false
+
     }
   },
+  computed:{
+    ...mapState(['modalShow', 'user_password', 'user_cardid'])
+  },
   methods:{
+    ...mapMutations(['modalForm_func', 'modalHide_func', 'formSubmit_func', 'UserPassword_func', 'UserCardId_func']),
     modalForm(){
-      this.modalShow=true;
+      this.modalForm_func()
     },
     modalHide(){
-      this.modalShow=false;
+      this.modalHide_func()
     },
     formSubmit(){
-      this.modalShow=false;
+      this.formSubmit_func()
     },
     UserPassword(){
-      this.user_password=true;
-      this.user_cardid=false;
+      this.UserPassword_func()
     },
     UserCardId(){
-      this.user_cardid=true;
-      this.user_password=false;
+      this.UserCardId_func()
     }
   }
 }

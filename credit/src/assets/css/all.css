@@ -111,12 +111,14 @@
     .header_body_credit_link{
         width: 364px;
     }
-    .body_credit_link img{
-        height: 204px;
+    .body_content_column{
+        width: 370px;
     }
-    .body_credit_link b{
-        font-size: 24px;
-        color: #6C013D;
+    .body_credit_types{
+        height: 244px;
+    }
+    .user_form{
+        margin-top: -44px;
     }
 }
 @media only screen and (max-width: 1100px) {
@@ -159,12 +161,8 @@
         width: 244px;
         padding: 0px 14px 0px 14px;
     }
-    .body_credit_link img{
-        height: 204px;
-    }
-    .body_credit_link b{
-        font-size: 24px;
-        color: #6C013D;
+    .body_content_column{
+        width: 274px;
     }
 
 }
@@ -178,24 +176,16 @@
     .header_mobile_navigator_url{
         display: block;
     }
-    .body_credit_link img{
-        height: 204px;
+    .body_credit_types{
+        height: 544px;
     }
-    .body_credit_link b{
-        font-size: 24px;
-        color: #6C013D;
+    .user_form{
+        margin-top: -244px;
     }
 }
 @media only screen and (max-width: 550px) {
     .header_container{
         margin: 44px 4px 44px 64px;
-    }
-    .body_credit_link img{
-        height: 114px;
-    }
-    .body_credit_link b{
-        font-size: 16px;
-        color: #6C013D;
     }
 }
 /*CreditView.vue*/
@@ -223,33 +213,8 @@
 .header_history_url_main:hover{
     color: #211AE1;
 }
-.body_credit{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.body_credit_link{
-    text-decoration: none !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    height: 254px;
-    width: 100%;
-    transition: transform .2s;
-    border: solid 1px #EEEEEE;
-    margin-bottom: 24px;
-}
-.body_credit_link:hover{
-    box-shadow: 3px 3px #EEEEEE;
-    -ms-transform: scale(1.04); /* IE 9 */
-    -webkit-transform: scale(1.04); /* Safari 3-8 */
-    transform: scale(1.04);
-}
 .body_credit_types{
     display: flex;
-    height: 244px;
     margin-top: 24px;
     justify-content: space-around;
 }
@@ -257,11 +222,29 @@
 
 
 /*Agrobank.vue*/
-.body_content_service{
-    display: flex;
-    justify-content: space-around;
+.body_credit_link img{
+    height: 244px;
 }
-.body_content_column{
+.body_credit_link span{
+    font-size: 16px;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+@media only screen and (min-width: 769px) {
+    .body_main_content_service{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .body_main_content_service{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+.body_main_content_column{
     height: 186px;
     width: 370px;
     display: flex;
@@ -272,17 +255,74 @@
     flex-direction: column;
     border: solid 1px #DCDCDC;
     transition: transform .3s;
-    text-decoration: none !important;
+    color: black;
+
 }
-.body_content_column:hover{
+.body_main_content_column:hover{
     color: black;
     box-shadow: 0px 3px rgba(0, 0, 0, 0.5);
     -ms-transform: scale(1.04); /* IE 9 */
     -webkit-transform: scale(1.04); /* Safari 3-8 */
     transform: scale(1.04);
+    text-decoration: none;
+}
+.body_main_content_column img{
+    height: 60px;
+    margin-bottom: 14px;
+}
+
+
+
+
+/* CreditView.vue
+*/
+
+@media only screen and (min-width: 769px) {
+    .body_content_service{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .body_content_service{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+.body_content_column{
+    display: flex;
+    color:black;
+    justify-content: center;
+    align-items: center;
+    margin:7px 7px 7px 7px;
+    border-radius: 4px;
+    border: solid 1px #DCDCDC;
+    transition: transform .3s;
+    text-decoration: none !important;
+}
+.body_content_column:hover{
+    color: black;
+    box-shadow: 0px 3px rgba(0, 0, 0, 0.3);
+    -ms-transform: scale(1.04); /* IE 9 */
+    -webkit-transform: scale(1.04); /* Safari 3-8 */
+    transform: scale(1.04);
+}
+.body_content_column_credit{
+    display: flex;
+    flex-direction: column;
+    color:black;
+}
+.body_content_column_credit:hover{
+    text-decoration: none;
+    color:black;
+}
+.body_content_column_credit span{
+    display: flex;
+    justify-content: center;
 }
 .body_content_column img{
-    height: 60px;
+    height: 120px;
     margin-bottom: 14px;
 }
 .body_text{
@@ -332,7 +372,6 @@
     background-color: white;
 }
 .user_form{
-    margin-top: -184px;
     display: flex;
     justify-content: center;
     position: absolute;
@@ -364,6 +403,7 @@
     margin-left: 14px;
     background-color: transparent;
     border: 0px;
+    width: 8px;
 }
 .body_user_form{
     /*background-color:rgba(0, 0, 0, 0.2);*/
@@ -402,4 +442,79 @@
         text-align: center;
         margin-bottom: 14px;
     }
+}
+
+.body_credit_link{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color:black;
+}
+.body_credit_link:hover{
+    text-decoration: none;
+    color:black;
+}
+
+.form_avtorization{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.2);
+}
+.form_avtorization form{
+    margin-top: 54px;
+    width: 15%;
+    background-color: white;
+    border: solid 1px whitesmoke;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+}
+.form_avtorization input,button{
+    width: 97%;
+    margin: 4px 4px 4px 4px;
+}
+.form_avtorization>a{
+    color: white;
+    font-weight: bold;
+    margin-top: 34px;
+}
+.transfers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+    margin-top: -144px;
+}
+.transfers .card{
+    width: 80%;
+    max-height: 800px;
+    overflow-y: auto;
+}
+.transfers .card-header{
+    display: flex;
+    font-size: 18px;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    z-index: 6;
+    background-color: #F7F7F7;
+}
+.transfers .card-body{
+    margin-top: 44px;
+}
+.body_transfer_content img{
+    height: 104px;
+    width: 60%;
+}
+.body_transfer_content{
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 14px;
+}
+.transfers .card-header>a{
+    text-decoration: none;
+    color:black;
 }

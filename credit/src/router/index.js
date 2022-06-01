@@ -5,7 +5,8 @@ import CreditTypes from '../views/CreditTypes'
 import CreditProcedure from '../views/CreditProcedure'
 import AboutUser from "@/views/AboutUser"
 import Agrobank from "@/views/Agrobank";
-import store from "@/store"
+import store from "@/store";
+import creditCalculator from "@/views/CreditCalculator";
 
 const routes = [
   {
@@ -17,6 +18,11 @@ const routes = [
     path: '/agrobank',
     name: 'agrobank',
     component: Agrobank
+  },
+  {
+    path: '/credit-calculator',
+    name: 'creditCalculator',
+    component: creditCalculator
   },
   {
     path: '/home',
