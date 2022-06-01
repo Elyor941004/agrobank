@@ -2,8 +2,8 @@
   <credit-header/>
     <div class="container">
     <div class="header_history_link" style="display: flex; justify-content: flex-start !important;">
-      <router-link to="/" class="header_history_url_main">Оплата услуг</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
-      <span to="/" class="header_history_url">Международные переводы</span>
+      <router-link to="/" class="header_history_url_main">Кредит турлари</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
+      <span class="header_history_url">Кредит хизматлари</span>
     </div>
     <div class="body_user_form" v-if="modalShow">
 
@@ -73,7 +73,7 @@ export default {
     UserCardId(){
       this.UserCardId_func()
     }
-  }
+  },
 }
 </script>
 <style scoped>

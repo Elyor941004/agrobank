@@ -2,8 +2,8 @@
   <credit-header/>
     <div class="container credit-procedure">
     <div class="header_history_link" style="display: flex; justify-content: flex-start !important;">
-      <router-link to="/" class="header_history_url_main">Оплата услуг</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
-      <span to="/" class="header_history_url">Международные переводы</span>
+      <router-link to="/credit-service" class="header_history_url_main">Кредит хизматлари</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
+      <span class="header_history_url">Кредитлаш тартиби</span>
     </div>
       <div class="row">
         <div class="col-4">

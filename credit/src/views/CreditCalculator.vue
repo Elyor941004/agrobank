@@ -119,7 +119,7 @@
           </div>
         </div>
       </div>
-      <a href="" class="btn btn-success">Kreditni hisoblash</a>
+      <button type="submit" href="" class="btn btn-success">Kreditni hisoblash</button>
       <table class="table table-bordered">
         <thead>
         <tr>
@@ -163,10 +163,14 @@
       creditCardFunc(){
         this.creditCard=true
         this.educationCard=false;
+        this.onlineMicroCredit=false;
+        this.onlineMicroCreditHide=true;
       },
       educationCardFunc(){
         this.educationCard=true;
-        this.creditCard=false
+        this.creditCard=false;
+        this.onlineMicroCredit=false;
+        this.onlineMicroCreditHide=true;
       },
       onlineMicroCreditFunc(){
         this.onlineMicroCreditHide=false;

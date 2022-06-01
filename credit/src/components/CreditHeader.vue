@@ -28,14 +28,15 @@
     </div>
   </nav>
   <div>
+    <div id="overlay" @click="modalHide"></div>
     <div class="form_avtorization" v-if="form_avtorization">
       <form action="" class="form-group">
-        <input type="text" v-model="email" class="form-control">
-        <input type="text" v-model="password" class="form-control">
+        <input type="text" v-model="form.email" class="form-control">
+        <input type="password" v-model="form.password" class="form-control">
         <button  class="btn btn-success" @click="submit_form_avtorization">Авторизация</button>
         <button @click="getUsers">get users</button>
       </form>
-      <a @click="close_form_avtorization">x</a>
+      <a @click="close_form_avtorization" type="submit"><b>x</b></a>
     </div>
     <div class="header_body">
       <div class="header_body_credit">
@@ -189,8 +190,10 @@
     components: {Credit_layout},
     data(){
       return {
-        password:'',
-        email:'',
+        form:{
+          email:'',
+          password:'',
+        }
       }
     },
     computed:{
@@ -200,6 +203,7 @@
       ...mapMutations(['mobile_navigator_func', 'avtorization_func', 'transferModal_func',  'close_form_avtorization_func',  'submit_form_avtorization_func',  'getUsers_func',]),
       mobile_navigator(){
         this.mobile_navigator_func();
+        document.getElementById("overlay").style.display = "block";
       },
       avtorization(){
         this.avtorization_func();
@@ -212,7 +216,7 @@
       },
       async submit_form_avtorization(e){
         e.preventDefault();
-        this.submit_form_avtorization_func(this.email, this.password)
+        this.submit_form_avtorization_func(this.form)
       },
       getUsers(){
         this.getUsers_func();

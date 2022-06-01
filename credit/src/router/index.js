@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import CreditView from '../views/CreditView'
-import CreditTypes from '../views/CreditTypes'
+import CreditType from '../views/CreditType'
+import CreditService from '../views/CreditService'
 import CreditProcedure from '../views/CreditProcedure'
 import AboutUser from "@/views/AboutUser"
 import Agrobank from "@/views/Agrobank";
@@ -11,8 +11,8 @@ import creditCalculator from "@/views/CreditCalculator";
 const routes = [
   {
     path: '/',
-    name: 'credit',
-    component: CreditView,
+    name: 'credit-type',
+    component: CreditType,
   },
   {
     path: '/agrobank',
@@ -38,9 +38,9 @@ const routes = [
     }
   },
   {
-    path: '/credit-type',
-    name: 'credit-type',
-    component: CreditTypes
+    path: '/credit-service',
+    name: 'credit-service',
+    component: CreditService
   },
   {
     path: '/credit-procedure',
