@@ -11,8 +11,13 @@ export default createStore({
     password:'',
     modalTransfer:false,
     modalShow:false,
-    user_password:false,
-    user_cardid:false
+    user_password:true,
+    user_cardid:false,
+    calculatorValue:'',
+    creditCard:false,
+    educationCard:true,
+    onlineMicroCreditHide:true,
+    onlineMicroCredit:false,
   },
   getters: {
 
@@ -36,13 +41,14 @@ export default createStore({
         document.getElementById("overlay").style.display = "none";
       }
     },
-    UserPassword_func:state=>{
-      state.user_password=true;
-      state.user_cardid=false;
-    },
-    UserCardId_func:state=>{
-      state.user_cardid=true;
-      state.user_password=false;
+    inputChange_func:(state, formValue)=>{
+      if (formValue=='password'){
+        state.user_password=true;
+        state.user_cardid=false;
+      }else{
+        state.user_cardid=true;
+        state.user_password=false;
+      }
     },
     transferModal_func:state=>{
       if(state.modalTransfer==false){
@@ -58,25 +64,29 @@ export default createStore({
       document.getElementById("overlay").style.display = "none";
     },
     submit_form_avtorization_func:(state, form)=>{
+      state.form_avtorization = false;
+      document.getElementById("overlay").style.display = "none";
+
       const login = {
         email: form.email,
         password: form.password
       }
-      console.log(login)
       axios.post('http://agrobankapi/api/login', login)
           .then((response)=>{
-            console.log(response.data.token)
-            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('jwttoken', response.data.token);
             setAuthHeader(response.data.token);
           })
           .catch((err)=>console.log(err));
-      state.form_avtorization = false;
-      document.getElementById("overlay").style.display = "none";
     },
-    getUsers_func:state=>{
-      axios.get('http://agrobankapi/api/users')
-          .then((response) => console.log(response.data))
-          .catch((err) => console.log(err.response));
+    getUsers_func(){
+     axios.get('http://agrobankapi/api/users')
+        .then((response) => console.log(response.data))
+        .catch((err) => console.log(err.response));
+    },
+    logoutUser_func(){
+      axios.post('http://agrobankapi/api/logout')
+          .then(console.log('succesfully logged out'))
+          .catch(console.log('not logged out'))
     },
     modalForm_func:state=>{
       state.modalShow=true;
@@ -90,7 +100,29 @@ export default createStore({
       state.modalShow=false;
       document.getElementById("overlay").style.display = "none";
     },
-
+    selectCalculatorFunc:(state, text)=>{
+      switch (text){
+        case 'creditCard':
+          state.creditCard=true;
+          state.educationCard=false;
+          state.onlineMicroCreditHide=true;
+          state.onlineMicroCredit=false;
+        break;
+        case 'educationCard':
+          state.creditCard=false;
+          state.educationCard=true;
+          state.onlineMicroCreditHide=true;
+          state.onlineMicroCredit=false;
+        break;
+        case 'onlineMicroCredit':
+          state.creditCard=false;
+          state.educationCard=false;
+          state.onlineMicroCreditHide=false;
+          state.onlineMicroCredit=true;
+        break;
+        default:
+      }
+    }
   },
   actions: {
 

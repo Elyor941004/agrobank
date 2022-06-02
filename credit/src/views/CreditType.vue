@@ -31,7 +31,7 @@
           <router-link to="/credit-service" class="body_content_column">
             <div class="body_credit_link">
               <img src="../assets/img/talimkredit.jpg" alt="">
-              <span>Та'лим кредиты</span>
+              <span>Та'лим кредити</span>
             </div>
           </router-link>
         </div>

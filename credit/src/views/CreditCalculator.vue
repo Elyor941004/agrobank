@@ -6,10 +6,10 @@
   <div class="body_calculator">
     <div class="body_calculator_form form-group">
       <label for="">Kredit nomi</label>
-      <select name="" id="" class="form-control">
-        <option value="" class="form-control" @click="educationCardFunc">Ta'lim krediti</option>
-        <option value="" class="form-control" @click="onlineMicroCreditFunc">Onlayn mikroqarz</option>
-        <option value="" class="form-control" @click="creditCardFunc">Kredit karta</option>
+      <select name="" id="" class="form-control" v-model="calculatorValue" @change="selectCalculator">
+        <option value="educationCard" class="form-control">Ta'lim krediti</option>
+        <option value="onlineMicroCredit" class="form-control">Onlayn mikroqarz</option>
+        <option value="creditCard" class="form-control">Kredit karta</option>
       </select>
       <label for="">Kredit miqdori</label>
       <input type="number" class="form-control" placeholder="Kredit miqdorini kiriting">
@@ -149,35 +149,23 @@
 </template>
 <script>
   import CalculatorHeader from "@/components/CalculatorHeader";
+  import {mapState, mapMutations} from "vuex"
   export default{
     components: {CalculatorHeader},
     data(){
       return{
-        creditCard:false,
-        educationCard:true,
-        onlineMicroCreditHide:true,
-        onlineMicroCredit:false,
+        calculatorValue:'',
       }
     },
+    computed:{
+      ...mapState(['creditCard', 'educationCard', 'onlineMicroCreditHide', 'onlineMicroCredit'])
+    },
     methods:{
-      creditCardFunc(){
-        this.creditCard=true
-        this.educationCard=false;
-        this.onlineMicroCredit=false;
-        this.onlineMicroCreditHide=true;
+       ...mapMutations(['selectCalculatorFunc']),
+      selectCalculator(){
+         console.log(this.calculatorValue)
+        this.selectCalculatorFunc(this.calculatorValue);
       },
-      educationCardFunc(){
-        this.educationCard=true;
-        this.creditCard=false;
-        this.onlineMicroCredit=false;
-        this.onlineMicroCreditHide=true;
-      },
-      onlineMicroCreditFunc(){
-        this.onlineMicroCreditHide=false;
-        this.onlineMicroCredit=true;
-        this.creditCard=false;
-        this.educationCard=false;
-      }
     }
   }
 </script>

@@ -30,13 +30,14 @@
     <div class="user_form" v-if="modalShow">
       <form action="" class="form-group" >
         <label>Вход/регистрация</label><br>
-        <select class="user_form_select" name="" id="">
-          <option class="form-control" value="" @click="UserPassword">Паспорт</option>
-          <option class="form-control" value="" @click="UserCardId">Ид карта</option>
+        <select class="user_form_select" @change="InputChange" v-model="formValue">
+          <option class="form-control" value="password">Паспорт</option>
+          <option class="form-control" value="card">Ид карта</option>
         </select>
-        <input type="text" placeholder="Паспорт" v-if="user_password" class="form-control">
-        <input type="text" placeholder="Ид карта" v-if="user_cardid" class="form-control">
-        <router-link type="submit" to="/about-user" @click="formSubmit">Тасдиқлаш</router-link>
+        <input type="text" placeholder="серия" v-if="user_password" class="form-control">
+        <input type="text" placeholder="ид" v-if="user_cardid" class="form-control">
+        <router-link type="submit" class="form_submit" to="/about-user" @click="formSubmit">Тасдиқлаш</router-link>
+        <router-link type="submit" class="form_submit" to="/not-confirmed" @click="formSubmit">бекор қилиш</router-link>
       </form>
       <button class="form_close" @click="modalHide"><b>x</b></button>
     </div>
@@ -50,14 +51,14 @@ import {mapState, mapMutations} from "vuex";
 export default {
   data(){
     return{
-
+      formValue:''
     }
   },
   computed:{
     ...mapState(['modalShow', 'user_password', 'user_cardid'])
   },
   methods:{
-    ...mapMutations(['modalForm_func', 'modalHide_func', 'formSubmit_func', 'UserPassword_func', 'UserCardId_func']),
+    ...mapMutations(['modalForm_func', 'modalHide_func', 'formSubmit_func', 'inputChange_func']),
     modalForm(){
       this.modalForm_func()
     },
@@ -67,12 +68,9 @@ export default {
     formSubmit(){
       this.formSubmit_func()
     },
-    UserPassword(){
-      this.UserPassword_func()
+    InputChange(){
+      this.inputChange_func(this.formValue);
     },
-    UserCardId(){
-      this.UserCardId_func()
-    }
   },
 }
 </script>

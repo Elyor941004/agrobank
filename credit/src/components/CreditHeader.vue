@@ -7,6 +7,7 @@
       <a href="/" class="header_url">Партнерам</a>
       <a href="https://agrobank.uz" class="header_button">Agrobank.uz</a>
       <a  class="header_button" @click="avtorization">Вход/регистрации</a>
+
       <!--    <router-link to="/home">Home</router-link> |-->
       <!--    <router-link to="/about">About</router-link>-->
       <hr class="header_hr">
@@ -33,8 +34,9 @@
       <form action="" class="form-group">
         <input type="text" v-model="form.email" class="form-control">
         <input type="password" v-model="form.password" class="form-control">
-        <button  class="btn btn-success" @click="submit_form_avtorization">Авторизация</button>
-        <button @click="getUsers">get users</button>
+        <a class="form_submit" @click="submit_form_avtorization">Авторизация</a>
+        <button class="btn btn-info" @click="getUsers">get users</button>
+        <button class="btn btn-danger" @click="logoutUser">Logout</button>
       </form>
       <a @click="close_form_avtorization" type="submit"><b>x</b></a>
     </div>
@@ -60,7 +62,7 @@
           <span>
             Банки доступные для переводов
           </span>
-          <a @click="transferModal">x</a>
+          <a type="button" @click="transferModal">x</a>
         </div>
         <div class="card-body">
           <div class="row">
@@ -200,7 +202,7 @@
       ...mapState(['mobile_navigator_show', 'containerShow', 'form_avtorization', 'email', 'password', 'modalTransfer', 'ism']),
     },
     methods:{
-      ...mapMutations(['mobile_navigator_func', 'avtorization_func', 'transferModal_func',  'close_form_avtorization_func',  'submit_form_avtorization_func',  'getUsers_func',]),
+      ...mapMutations(['mobile_navigator_func', 'logoutUser_func', 'avtorization_func', 'transferModal_func',  'close_form_avtorization_func',  'submit_form_avtorization_func',  'getUsers_func',]),
       mobile_navigator(){
         this.mobile_navigator_func();
         document.getElementById("overlay").style.display = "block";
@@ -218,9 +220,14 @@
         e.preventDefault();
         this.submit_form_avtorization_func(this.form)
       },
-      getUsers(){
+      async getUsers(e){
+        e.preventDefault();
         this.getUsers_func();
-      }
+      },
+      async logoutUser(e){
+        e.preventDefault();
+        this.logoutUser_func();
+      },
     },
 
   }

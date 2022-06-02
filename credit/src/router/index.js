@@ -7,6 +7,7 @@ import AboutUser from "@/views/AboutUser"
 import Agrobank from "@/views/Agrobank";
 import store from "@/store";
 import creditCalculator from "@/views/CreditCalculator";
+import notConfirmed from "@/views/NotConfirmed";
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: '/agrobank',
     name: 'agrobank',
     component: Agrobank
+  },
+  {
+    path: '/not-confirmed',
+    name: 'not_confirmed',
+    component: notConfirmed
   },
   {
     path: '/credit-calculator',
