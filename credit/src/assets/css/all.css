@@ -198,6 +198,7 @@
     font-weight: bold;
     font-size: 15px;
     text-decoration: none !important;
+    margin-top: 4px;
 }
 .header_history_url_main{
     color: #0275E1;

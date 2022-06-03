@@ -1,13 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CreditType from '../views/CreditType'
-import CreditService from '../views/CreditService'
-import CreditProcedure from '../views/CreditProcedure'
+import MicroCreditProcedure from '../views/MicroCreditProcedure'
+import CreditCardProcedure from '../views/CreditCardProcedure'
+import AvtoCreditProcedure from '../views/AvtoCreditProcedure'
+import EducationCreditProcedure from '../views/EducationCreditProcedure'
 import AboutUser from "@/views/AboutUser"
 import Agrobank from "@/views/Agrobank";
 import store from "@/store";
 import creditCalculator from "@/views/CreditCalculator";
 import notConfirmed from "@/views/NotConfirmed";
+import MicroCreditService from "@/views/MicroCreditService";
+import EducationCreditService from "@/views/EducationCreditService";
+import CreditCardService from "@/views/CreditCardService";
+import AvtoCreditService from "@/views/AvtoCreditService";
+import MarketPlaceMicroCredit from "@/views/MarketPlaceMicroCredit.vue"
+import OnlineMicroCredit from "@/views/OnlineMicroCredit.vue"
+import SimpleMicroCredit from "@/views/SimpleMicroCredit.vue"
+import SupportMicroCredit from "@/views/SupportMicroCredit.vue"
 
 const routes = [
   {
@@ -19,6 +29,26 @@ const routes = [
     path: '/agrobank',
     name: 'agrobank',
     component: Agrobank
+  },
+  {
+    path: '/micro-credit-service',
+    name: 'microcreditservice',
+    component: MicroCreditService
+  },
+  {
+    path: '/education-credit-service',
+    name: 'educationcreditservice',
+    component: EducationCreditService
+  },
+  {
+    path: '/credit-card-service',
+    name: 'creditcardservice',
+    component: CreditCardService
+  },
+  {
+    path: '/avto-credit-service',
+    name: 'avtocreditservice',
+    component: AvtoCreditService
   },
   {
     path: '/not-confirmed',
@@ -44,14 +74,44 @@ const routes = [
     }
   },
   {
-    path: '/credit-service',
-    name: 'credit-service',
-    component: CreditService
+    path: '/micro-credit-procedure',
+    name: 'micro-credit-procedure',
+    component: MicroCreditProcedure
   },
   {
-    path: '/credit-procedure',
-    name: 'credit-procedure',
-    component: CreditProcedure
+    path: '/credit-card-procedure',
+    name: 'credit-card-procedure',
+    component: CreditCardProcedure
+  },
+  {
+    path: '/education-credit-procedure',
+    name: 'education-credit-procedure',
+    component: EducationCreditProcedure
+  },
+  {
+    path: '/avto-credit-procedure',
+    name: 'avto-credit-procedure',
+    component: AvtoCreditProcedure
+  },
+  {
+    path: '/simple-micro-credit',
+    name: 'simple-micro-credit',
+    component: SimpleMicroCredit
+  },
+  {
+    path: '/support-micro-credit',
+    name: 'support-micro-credit',
+    component: SupportMicroCredit
+  },
+  {
+    path: '/market-place-micro-credit',
+    name: 'market-place-micro-credit',
+    component: MarketPlaceMicroCredit
+  },
+  {
+    path: '/online-micro-credit',
+    name: 'online-micro-credit',
+    component: OnlineMicroCredit
   },
   {
     path: '/about-user',

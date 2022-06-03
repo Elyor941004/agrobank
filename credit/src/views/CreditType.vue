@@ -8,13 +8,13 @@
       </div>
       <div class="body_content">
         <div class="body_content_service">
-          <router-link to="/credit-service" class="body_content_column">
+          <router-link to="/credit-card-service" class="body_content_column">
             <div  class="body_credit_link">
               <img src="../assets/img/credit_card.jpg" alt="">
               <span>Кредит карта</span>
             </div>
           </router-link>
-          <router-link to="/credit-service" class="body_content_column">
+          <router-link to="/micro-credit-service" class="body_content_column">
             <div class="body_credit_link">
               <img src="../assets/img/mikroqarz.jpg" alt="">
               <span>Микроқарз</span>
@@ -22,13 +22,13 @@
           </router-link>
         </div>
         <div class="body_content_service">
-          <router-link to="/credit-service" class="body_content_column">
+          <router-link to="/avto-credit-service" class="body_content_column">
             <div class="body_credit_link">
               <img src="../assets/img/avtokredit.jpg" alt="">
               <span>Автокредит</span>
             </div>
           </router-link>
-          <router-link to="/credit-service" class="body_content_column">
+          <router-link to="/education-credit-service" class="body_content_column">
             <div class="body_credit_link">
               <img src="../assets/img/talimkredit.jpg" alt="">
               <span>Та'лим кредити</span>
