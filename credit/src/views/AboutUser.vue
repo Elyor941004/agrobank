@@ -2,7 +2,7 @@
   <credit-header/>
   <div class="container about_user_header">
     <div class="header_history_link" style="display: flex; justify-content: flex-start !important;">
-      <router-link to="/credit-service" class="header_history_url_main">Кредит хизматлари</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
+      <router-link to="/micro-credit-service" class="header_history_url_main">Кредит хизматлари</router-link>&nbsp;&nbsp;/&nbsp;&nbsp;
       <span class="header_history_url">Мижоз ҳақидаги тўлиқ маълумотлар</span>
     </div>
     <div class="row">

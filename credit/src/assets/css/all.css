@@ -29,7 +29,7 @@
 }
 .header_body_credit_link:hover{
     color: black;
-    box-shadow: 3px 3px #EEEEEE;
+    box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.2);
     -ms-transform: scale(1.1); /* IE 9 */
     -webkit-transform: scale(1.1); /* Safari 3-8 */
     transform: scale(1.1);
@@ -77,7 +77,7 @@
 }
 .header_button:hover{
     color: white;
-    box-shadow:0px 2px silver;
+    box-shadow:0px 2px 2px rgb(0, 0, 0, 0.2);
 }
 .header_url img{
     height: 34px;
@@ -256,7 +256,7 @@
 }
 .body_main_content_column:hover{
     color: black;
-    box-shadow: 0px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 3px 3px rgb(0, 0, 0, 0.2);
     -ms-transform: scale(1.04); /* IE 9 */
     -webkit-transform: scale(1.04); /* Safari 3-8 */
     transform: scale(1.04);
@@ -300,7 +300,7 @@
 }
 .body_content_column:hover{
     color: black;
-    box-shadow: 0px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 3px rgb(0, 0, 0, 0.2);
     -ms-transform: scale(1.04); /* IE 9 */
     -webkit-transform: scale(1.04); /* Safari 3-8 */
     transform: scale(1.04);
@@ -345,11 +345,11 @@
     background-color: #B0C2E5;
     padding: 0px 14px 0px 14px;
     text-decoration: none !important;
-    box-shadow: 4px 4px #8F9CB4;
+    box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.2);
     transition: transform .2s;
 }
 .credit_type_button:hover{
-    box-shadow: 6px 6px #8F9CB4;
+    box-shadow: 6px 6px 6px rgb(0, 0, 0, 0.2);
     -ms-transform: scale(1.04); /* IE 9 */
     -webkit-transform: scale(1.04); /* Safari 3-8 */
     transform: scale(1.04);
@@ -381,7 +381,7 @@
     border: solid 1px #CED4DA;
     padding: 14px 24px 14px 24px;
     border-radius: 4px;
-    box-shadow: 4px 4px #B4B4B4;
+    box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.2);
     z-index: 2;
 }
 .form_submit{

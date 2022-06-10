@@ -6,7 +6,7 @@
       </div>
       <div class="body_credit_types">
         <div class="body_content_service">
-          <router-link to="/credit-service" class="body_content_column">
+          <router-link to="/micro-credit-service" class="body_content_column">
             <div class="body_content_column_credit">
               <span>Мижоз маълумотларини текшириб қайтадан киритиши керак </span>
             </div>

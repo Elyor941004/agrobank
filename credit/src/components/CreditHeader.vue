@@ -6,7 +6,7 @@
       <a href="/" class="header_url">Об услуге</a>
       <a href="/" class="header_url">Партнерам</a>
       <a href="https://agrobank.uz" class="header_button">Agrobank.uz</a>
-      <a  class="header_button" @click="avtorization">Вход/регистрации</a>
+      <a class="header_button" @click="avtorization">Вход/регистрации</a>
 
       <!--    <router-link to="/home">Home</router-link> |-->
       <!--    <router-link to="/about">About</router-link>-->

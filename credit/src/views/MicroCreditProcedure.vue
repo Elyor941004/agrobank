@@ -11,12 +11,12 @@
             <router-link to="/simple-micro-credit" class="body_content_column">
               <b>Оддий микроқарз</b>
             </router-link>
-            <router-link to="/https://play.google.com/store/apps/details?id=uz.agrobank.mobile.mbank" class="body_content_column">
+            <router-link to="/online-micro-credit" class="body_content_column">
               <b>Онлайн микроқарз</b>
             </router-link>
           </div>
           <div class="body_content_service">
-            <router-link to="/https://play.google.com/store/apps/details?id=uz.agrobank.mobile.mbank" class="body_content_column">
+            <router-link to="/support-micro-credit" class="body_content_column">
               <b>Мадад микроқарз</b>
             </router-link>
             <router-link to="/market-place-micro-credit" class="body_content_column">
@@ -25,7 +25,7 @@
           </div>
         </div>
       </div>
-  </div>
+    </div>
   <credit-footer/>
 </template>
 <style>
